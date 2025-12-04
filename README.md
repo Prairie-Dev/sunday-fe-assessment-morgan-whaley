@@ -21,19 +21,17 @@ Your task is to demonstrate your knowledge of leveraging React components to imp
 
 #### 2. Shipment Plan Generation
 
-- **Trigger**: When "Generate Lawn Plan" is clicked, create an optimized shipment schedule
+- **Trigger**: When "Generate Lawn Plan" is clicked, create an optimized shipment schedule which groups products together to be shipped
+- **Scneario**: Shipping is expensive, we want to optimize shipping costs while maintaining a good customer experience
+    1. **Business Needs**: We don't want to ship every item individually (undergroup), but we also don't want to ship the user an entire year's worth of product all at once (overgroup). Create a minimum of 2 and a maximum of 4 shipments
+    2. **Key Outcome**: Group products intelligently based on application dates and constraints
+    3. **Grouping Logic**: Products with an application date within the same week should generally be shipped together when possible
+    4. **Delivery Timing**: Products must arrive **before** their application dates
+    5. **Lead Time**: Assume 7 days shipping time when calculating shipment dates
 - **Display**: Show each shipment with:
   - Shipment date (when customer receives it)
   - Products included (with quantities)
-  - Total price per shipment
-- **Optimization**: Group products intelligently based on application dates and constraints
-
-### Business Constraints
-
-1. **Shipment Limits**: Must generate exactly 2-4 shipments (no more, no less)
-2. **Delivery Timing**: Products must arrive **before** their application dates
-3. **Lead Time**: Assume 5-7 days shipping time when calculating shipment dates
-4. **Grouping Logic**: Products with an application date within the same week should generally be shipped together when possible
+  - Total price of the group
 
 ### Technical Expectations
 
